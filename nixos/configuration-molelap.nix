@@ -9,7 +9,7 @@
   boot.loader.systemd-boot.enable = true;
   boot.loader.efi.canTouchEfiVariables = true;
 
-  networking.hostName = "molelap";
+  networking.hostName = "bendez";
   networking.interfaces.eno1.useDHCP = true;
   networking.interfaces.wlp2s0.useDHCP = true;
   networking.interfaces.wwp0s29u1u6i6.useDHCP = true;
@@ -21,8 +21,8 @@
       StreamLocalBindUnlink yes
     '';
   };
-  users.extraUsers.mole.openssh.authorizedKeys.keyFiles = [
-    "/home/mole/.ssh/moletable.pub"
+  users.extraUsers.bendez.openssh.authorizedKeys.keyFiles = [
+    "/home/bendez/.ssh/id_rsa.pub"
   ];
   # if ssh, use the forwarded socket (set to different path from
   # default socket to allow both direct use and ssh use with yubikey)
@@ -36,12 +36,12 @@
 
   services.xserver = {
     videoDrivers = [ "intel" ];
-    extraLayouts.fi-molemak = {
-      description = "Finnish colemak with some modifier customization";
-      languages = [ "fi" ];
-      symbolsFile = ../molemak.xkb;
+    extraLayouts.us-keymap = {
+      description = "Standard American keyboard";
+      languages = [ "us" ];
+      symbolsFile = ../keymap.xkb;
     };
-    layout = "fi-molemak";
+    layout = "us-keymap";
     # Enable touchpad support.
     libinput.enable = true;
   };

@@ -54,10 +54,10 @@
   };
 
   # Define a user account. Don't forget to set a password with ‘passwd’.
-  users.users.mole = {
+  users.users.bendez = {
     isNormalUser = true;
-    home = "/home/mole";
-    description = "mole";
+    home = "/home/bendez";
+    description = "bendez";
     shell = pkgs.fish;
     extraGroups = [
       "networkmanager"

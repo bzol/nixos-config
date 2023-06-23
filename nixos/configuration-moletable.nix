@@ -27,7 +27,7 @@
   };
 
   environment.variables = {
-    LV2_PATH = "/home/mole/.nix-profile/lib/lv2";
+    LV2_PATH = "/home/bendez/.nix-profile/lib/lv2";
     AWESOME_PADDING_DP_0 = "40";
     AWESOME_PADDING_DP_2 = "200";
     AWESOME_RYZEN_TEMP = "1";
@@ -46,7 +46,7 @@
     configurationLimit = 10;
   };
 
-  networking.hostName = "moletable";
+  networking.hostName = "bendez";
   networking.networkmanager.enable = true;
   # common development server ports
   networking.firewall.allowedTCPPorts = [ 8080 8000 9000 ];
@@ -92,7 +92,7 @@
   # shenanigans for agent forwarding to work computer
   programs.ssh.extraConfig = ''
     Host work
-      User mole
+      User bendez
       HostName 192.168.0.172
       ForwardX11 yes
       ForwardX11Trusted yes

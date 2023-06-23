@@ -42,8 +42,8 @@ let
         /data/zotero                    \
         /data/steam-windows/steamapps/common/Beat\ Saber/UserData \
         /data/steam-windows/steamapps/common/Beat\ Saber/Beat\ Saber_Data/CustomLevels \
-        /home/mole/stuff                \
-        /home/mole/.config/krita*       \
+        /home/bendez/stuff                \
+        /home/bendez/.config/krita*       \
 
     backup_exit=$?
 

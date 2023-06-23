@@ -25,10 +25,10 @@
 
   services.xserver = {
     # videoDrivers = ["intel"];
-    extraLayouts.fi-molemak = {
+    extraLayouts.us-keymap = {
       description = "Finnish colemak with some modifier customization";
       languages = [ "fi" ];
-      symbolsFile = ../molemak.xkb;
+      symbolsFile = ../keymap.xkb;
     };
     # fi by default because I'll be using an ergodox with this one most of the time
     layout = "fi";
@@ -52,10 +52,10 @@
       StreamLocalBindUnlink yes
     '';
   };
-  users.extraUsers.mole.openssh.authorizedKeys.keyFiles = [
-    "/home/mole/.ssh/moleyubi.pub"
+  users.extraUsers.bendez.openssh.authorizedKeys.keyFiles = [
+    "/home/bendez/.ssh/moleyubi.pub"
   ];
-  nix.settings.trusted-users = [ "root" "mole" ];
+  nix.settings.trusted-users = [ "root" "bendez" ];
   # if ssh, use the forwarded socket (set to different path from
   # default socket to allow both direct use and ssh use with yubikey)
   environment.shellInit = ''
